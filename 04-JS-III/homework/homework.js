@@ -3,33 +3,53 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  //saber posicion 
+  // let frutas = ['Manzana', 'Banana'];
+  // return frutas.indexOf('Manzana');
+  let frutas = ['Manzana', 'Banana', 'Pera'];
+  return frutas[0];
 }
-
+devolverPrimerElemento();
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  //con metodo pop()
+  // let numbers = [1,2,3,4,5,6];
+  // return numbers.pop();
+  let numbers = [1, 2, 3, 4, 5, 6];
+  return numbers[5];
 }
-
+devolverUltimoElemento();
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  let frutas = ['Manzana', 'Banana', 'Pera'];
+  let cantidad = frutas.length();
+  return cantidad;
 }
-
+//DUDA!!
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  let years = [5, 10, 15];
+  let sumarUno = years.map((suma) => {
+    return suma + 1;
+  });
 }
-
+//duda
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  let days = ['monday', 'tuesday', 'wednesday', 'thursday'];
+  let todoJunto= days.push('friday');
+  return todoJunto;
 }
 
 
@@ -80,12 +100,12 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 }
 
 
-function cuentoElementos(arreglo){
+function cuentoElementos(arreglo) {
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
@@ -97,15 +117,15 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
-} 
+
+}
 
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+
 }
 
 
@@ -113,8 +133,8 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
-} 
+
+}
 
 
 function mesesDelAño(array) {
