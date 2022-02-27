@@ -11,50 +11,53 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  //con metodo pop()
-  // let numbers = [1,2,3,4,5,6];
-  // return numbers.pop();
-  // let indiceUltimaPosicion = array.length - 1;
-  // let arrayListo = array[indiceUltimaPosicion];
-  // return arrayListo;
+  //pop opcion1:
+  let ultimoElemento = array.pop();
+   return ultimoElemento;
+  //length opcion2:
+  //  let ultimaPosicion = array.length - 1;
+  //  let arrayListo = array[ultimaPosicion];
+  //  return arrayListo;
 }
+//devolverUltimoElemento([1,6,8]);
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  let frutas = ["Manzana", "Banana", "Pera"];
-  let cantidad = frutas.length();
-  return cantidad;
+  let longitudArray = array.length;
+  return longitudArray;
 }
-//DUDA!!
+
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  let years = [5, 10, 15];
-  let sumarUno = years.map((suma) => {
-    return suma + 1;
+  let sumarUno = array.map((elementoArray) => {
+    return elementoArray + 1;
   });
+  return sumarUno;
 }
-//duda
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  let days = ["monday", "tuesday", "wednesday", "thursday"];
-  let todoJunto = days.push("friday");
-  return todoJunto;
+  array.push(elemento);
+  return array;
 }
+//agregarItemAlFinalDelArray([5,8], 'hola')
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
+//agregarItemAlComienzoDelArray([7,5], 'hola')
 
 function dePalabrasAFrase(palabras) {
   // "palabras" es un array de strings/cadenas
@@ -62,7 +65,11 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  const concatenacion = palabras.reduce(function (primerPalabra, siguientePalabra) {
+    return primerPalabra + ' ' + siguientePalabra;
+  });
 }
+
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
