@@ -201,14 +201,23 @@ function todosIguales(arreglo) {
   //Escribe tu código aquí:
   return arreglo.every(e => arreglo[0] === e);
 }
+
 //Precaución: ¡Llamar este método en un array vacío devuelve true para cualquier condición!
+
 function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  let filtrarMeses = array.filter(filtrar => filtrar === Enero, Marzo, Noviembre);
-  return filtrarMeses;
+  // ['abril', "Enero", "Marzo" ,'agosto', "Noviembre"]
+  
+  let filtrarMeses = array.filter(meses => meses === 'Enero' || meses === 'Marzo' || meses ==='Noviembre');
+
+  if (filtrarMeses.length === 3) {
+    return filtrarMeses;
+  } else {
+    return "No se encontraron los meses pedidos";
+  }
 }
 
 function mayorACien(array) {
@@ -228,7 +237,14 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-
+// const limite = "";
+const array = [];
+for (i = 0; i < 10; i + 2) {
+    if (numero  10)
+    // limite += i + "Se interrumpió la ejecución"
+    array.push(i)
+}
+return array;
 }
 
 function continueStatement(numero) {
