@@ -210,8 +210,8 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   // ['abril', "Enero", "Marzo" ,'agosto', "Noviembre"]
-  
-  let filtrarMeses = array.filter(meses => meses === 'Enero' || meses === 'Marzo' || meses ==='Noviembre');
+
+  let filtrarMeses = array.filter(meses => meses === 'Enero' || meses === 'Marzo' || meses === 'Noviembre');
 
   if (filtrarMeses.length === 3) {
     return filtrarMeses;
@@ -237,14 +237,16 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-// const limite = "";
-const array = [];
-for (i = 0; i < 10; i + 2) {
-    if (numero  10)
-    // limite += i + "Se interrumpió la ejecución"
-    array.push(i)
-}
-return array;
+  let numeroSumado = numero;
+  const array = [];
+  for(let i = 1; i <= 10; i++ ) {
+    numeroSumado = numeroSumado + 2;
+      if (numeroSumado === i) {
+        return "Se interrumpió la ejecución"
+      }
+    array.push(numeroSumado)
+  }
+  return array
 }
 
 function continueStatement(numero) {
@@ -254,7 +256,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-
+  let nuevaSuma = numero;
+  let cajita = []
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+   continue;
+  }
+   nuevaSuma = nuevaSuma + 2;
+   cajita.push(nuevaSuma)
+}
+return cajita;
 }
 
 // No modificar nada debajo de esta línea
